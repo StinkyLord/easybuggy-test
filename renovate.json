@@ -1,0 +1,383 @@
+{
+	"branchPrefix": "whitesource-remediate/",
+	"enabledManagers": [
+		"",
+		"maven",
+		"gradle",
+		"npm"
+	],
+	"includeForks": true,
+	"onboarding": false,
+	"requireConfig": "optional",
+	"vulnerabilityAlerts": {
+		"enabled": false,
+		"ignoreUnstable": false,
+		"groupName": null,
+		"schedule": [],
+		"dependencyDashboardApproval": false,
+		"labels": [
+			"security fix"
+		],
+		"commitMessageSuffix": ""
+	},
+	"extends": [
+		"github>whitesource/merge-confidence:beta"
+	],
+	"packageRules": [
+		{
+			"matchPackagePatterns": [
+				"*"
+			],
+			"enabled": false
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"commons-fileupload:commons-fileupload"
+			],
+			"matchCurrentVersion": "1.3.1",
+			"allowedVersions": "[1.5,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #13 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![Critical](https://whitesource-resources.whitesourcesoftware.com/critical_vul_bb.png?) Critical | 9.8 | [CVE-2016-1000031](https://www.mend.io/vulnerability-database/CVE-2016-1000031) |\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.5 | [CVE-2016-3092](https://www.mend.io/vulnerability-database/CVE-2016-3092) |\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.5 | [CVE-2023-24998](https://www.mend.io/vulnerability-database/CVE-2023-24998) |\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.5 | [WS-2014-0034](https://commons.apache.org/proper/commons-fileupload/changes-report.html) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"commons-fileupload\",\"libraryVersion\":\"1.3.1\",\"libraryFixVersion\":\"1.5\",\"libraryArtifactId\":\"commons-fileupload\",\"libraryGroupId\":\"commons-fileupload\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"Critical\",\"score\":\"9.8\",\"vulnerabilityId\":\"CVE-2016-1000031\"},{\"severity\":\"High\",\"score\":\"7.5\",\"vulnerabilityId\":\"CVE-2016-3092\"},{\"severity\":\"High\",\"score\":\"7.5\",\"vulnerabilityId\":\"CVE-2023-24998\"},{\"severity\":\"High\",\"score\":\"7.5\",\"vulnerabilityId\":\"WS-2014-0034\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"log4j:log4j"
+			],
+			"matchCurrentVersion": "1.2.13",
+			"allowedVersions": "[1.2.17-16,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #4 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![Critical](https://whitesource-resources.whitesourcesoftware.com/critical_vul_bb.png?) Critical | 9.8 | [CVE-2019-17571](https://www.mend.io/vulnerability-database/CVE-2019-17571) |\n| ![Critical](https://whitesource-resources.whitesourcesoftware.com/critical_vul_bb.png?) Critical | 9.8 | [CVE-2020-9493](https://www.mend.io/vulnerability-database/CVE-2020-9493) |\n| ![Critical](https://whitesource-resources.whitesourcesoftware.com/critical_vul_bb.png?) Critical | 9.8 | [CVE-2022-23305](https://www.mend.io/vulnerability-database/CVE-2022-23305) |\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 8.8 | [CVE-2022-23302](https://www.mend.io/vulnerability-database/CVE-2022-23302) |\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 8.8 | [CVE-2022-23307](https://www.mend.io/vulnerability-database/CVE-2022-23307) |\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.5 | [CVE-2021-4104](https://www.mend.io/vulnerability-database/CVE-2021-4104) |\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.5 | [CVE-2023-26464](https://www.mend.io/vulnerability-database/CVE-2023-26464) |\n| ![Low](https://whitesource-resources.whitesourcesoftware.com/low_vul_bb.png?) Low | 3.7 | [CVE-2020-9488](https://www.mend.io/vulnerability-database/CVE-2020-9488) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"log4j\",\"libraryVersion\":\"1.2.13\",\"libraryFixVersion\":\"1.2.17-16\",\"libraryArtifactId\":\"log4j\",\"libraryGroupId\":\"log4j\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"Critical\",\"score\":\"9.8\",\"vulnerabilityId\":\"CVE-2019-17571\"},{\"severity\":\"Critical\",\"score\":\"9.8\",\"vulnerabilityId\":\"CVE-2020-9493\"},{\"severity\":\"Critical\",\"score\":\"9.8\",\"vulnerabilityId\":\"CVE-2022-23305\"},{\"severity\":\"High\",\"score\":\"8.8\",\"vulnerabilityId\":\"CVE-2022-23302\"},{\"severity\":\"High\",\"score\":\"8.8\",\"vulnerabilityId\":\"CVE-2022-23307\"},{\"severity\":\"High\",\"score\":\"7.5\",\"vulnerabilityId\":\"CVE-2021-4104\"},{\"severity\":\"High\",\"score\":\"7.5\",\"vulnerabilityId\":\"CVE-2023-26464\"},{\"severity\":\"Low\",\"score\":\"3.7\",\"vulnerabilityId\":\"CVE-2020-9488\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"org.owasp.esapi:esapi"
+			],
+			"matchCurrentVersion": "2.1.0.1",
+			"allowedVersions": "[2.3.0.0,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #8 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![Critical](https://whitesource-resources.whitesourcesoftware.com/critical_vul_bb.png?) Critical | 9.8 | [CVE-2022-23457](https://www.mend.io/vulnerability-database/CVE-2022-23457) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.1 | [CVE-2022-24891](https://www.mend.io/vulnerability-database/CVE-2022-24891) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"esapi\",\"libraryVersion\":\"2.1.0.1\",\"libraryFixVersion\":\"2.3.0.0\",\"libraryArtifactId\":\"esapi\",\"libraryGroupId\":\"org.owasp.esapi\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"Critical\",\"score\":\"9.8\",\"vulnerabilityId\":\"CVE-2022-23457\"},{\"severity\":\"Medium\",\"score\":\"6.1\",\"vulnerabilityId\":\"CVE-2022-24891\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"org.apache.derby:derby"
+			],
+			"matchCurrentVersion": "10.8.3.0",
+			"allowedVersions": "[10.14.2.0,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #9 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![Critical](https://whitesource-resources.whitesourcesoftware.com/critical_vul_bb.png?) Critical | 9.1 | [CVE-2015-1832](https://www.mend.io/vulnerability-database/CVE-2015-1832) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 5.3 | [CVE-2018-1313](https://www.mend.io/vulnerability-database/CVE-2018-1313) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"derby\",\"libraryVersion\":\"10.8.3.0\",\"libraryFixVersion\":\"10.14.2.0\",\"libraryArtifactId\":\"derby\",\"libraryGroupId\":\"org.apache.derby\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"Critical\",\"score\":\"9.1\",\"vulnerabilityId\":\"CVE-2015-1832\"},{\"severity\":\"Medium\",\"score\":\"5.3\",\"vulnerabilityId\":\"CVE-2018-1313\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"mysql:mysql-connector-java"
+			],
+			"matchCurrentVersion": "5.1.25",
+			"allowedVersions": "[8.0.28,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #7 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 8.5 | [CVE-2017-3523](https://www.mend.io/vulnerability-database/CVE-2017-3523) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.6 | [CVE-2022-21363](https://www.mend.io/vulnerability-database/CVE-2022-21363) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.4 | [CVE-2017-3586](https://www.mend.io/vulnerability-database/CVE-2017-3586) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.3 | [CVE-2019-2692](https://www.mend.io/vulnerability-database/CVE-2019-2692) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 5.0 | [CVE-2020-2934](https://www.mend.io/vulnerability-database/CVE-2020-2934) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 4.7 | [CVE-2020-2875](https://www.mend.io/vulnerability-database/CVE-2020-2875) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 4.2 | [CVE-2015-2575](https://www.mend.io/vulnerability-database/CVE-2015-2575) |\n| ![Low](https://whitesource-resources.whitesourcesoftware.com/low_vul_bb.png?) Low | 3.3 | [CVE-2017-3589](https://www.mend.io/vulnerability-database/CVE-2017-3589) |\n| ![Low](https://whitesource-resources.whitesourcesoftware.com/low_vul_bb.png?) Low | 2.2 | [CVE-2020-2933](https://www.mend.io/vulnerability-database/CVE-2020-2933) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"mysql-connector-java\",\"libraryVersion\":\"5.1.25\",\"libraryFixVersion\":\"8.0.28\",\"libraryArtifactId\":\"mysql-connector-java\",\"libraryGroupId\":\"mysql\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"High\",\"score\":\"8.5\",\"vulnerabilityId\":\"CVE-2017-3523\"},{\"severity\":\"Medium\",\"score\":\"6.6\",\"vulnerabilityId\":\"CVE-2022-21363\"},{\"severity\":\"Medium\",\"score\":\"6.4\",\"vulnerabilityId\":\"CVE-2017-3586\"},{\"severity\":\"Medium\",\"score\":\"6.3\",\"vulnerabilityId\":\"CVE-2019-2692\"},{\"severity\":\"Medium\",\"score\":\"5.0\",\"vulnerabilityId\":\"CVE-2020-2934\"},{\"severity\":\"Medium\",\"score\":\"4.7\",\"vulnerabilityId\":\"CVE-2020-2875\"},{\"severity\":\"Medium\",\"score\":\"4.2\",\"vulnerabilityId\":\"CVE-2015-2575\"},{\"severity\":\"Low\",\"score\":\"3.3\",\"vulnerabilityId\":\"CVE-2017-3589\"},{\"severity\":\"Low\",\"score\":\"2.2\",\"vulnerabilityId\":\"CVE-2020-2933\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"org.beanshell:bsh-core"
+			],
+			"matchCurrentVersion": "2.0b4",
+			"allowedVersions": "[2.0b6,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #6 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 8.1 | [CVE-2016-2510](https://www.mend.io/vulnerability-database/CVE-2016-2510) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"bsh-core\",\"libraryVersion\":\"2.0b4\",\"libraryFixVersion\":\"2.0b6\",\"libraryArtifactId\":\"bsh-core\",\"libraryGroupId\":\"org.beanshell\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"High\",\"score\":\"8.1\",\"vulnerabilityId\":\"CVE-2016-2510\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"xerces:xercesImpl",
+				"xerces:xercesimpl"
+			],
+			"matchCurrentVersion": "2.8.0",
+			"allowedVersions": "[2.12.2,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #3 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.5 | [CVE-2012-0881](https://www.mend.io/vulnerability-database/CVE-2012-0881) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.5 | [CVE-2022-23437](https://www.mend.io/vulnerability-database/CVE-2022-23437) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 5.9 | [CVE-2013-4002](https://www.mend.io/vulnerability-database/CVE-2013-4002) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 5.3 | [CVE-2009-2625](https://www.mend.io/vulnerability-database/CVE-2009-2625) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 5.3 | [CVE-2020-14338](https://www.mend.io/vulnerability-database/CVE-2020-14338) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"xercesImpl\",\"libraryVersion\":\"2.8.0\",\"libraryFixVersion\":\"2.12.2\",\"libraryArtifactId\":\"xercesImpl\",\"libraryGroupId\":\"xerces\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"High\",\"score\":\"7.5\",\"vulnerabilityId\":\"CVE-2012-0881\"},{\"severity\":\"Medium\",\"score\":\"6.5\",\"vulnerabilityId\":\"CVE-2022-23437\"},{\"severity\":\"Medium\",\"score\":\"5.9\",\"vulnerabilityId\":\"CVE-2013-4002\"},{\"severity\":\"Medium\",\"score\":\"5.3\",\"vulnerabilityId\":\"CVE-2009-2625\"},{\"severity\":\"Medium\",\"score\":\"5.3\",\"vulnerabilityId\":\"CVE-2020-14338\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"net.sourceforge.nekohtml:nekohtml"
+			],
+			"matchCurrentVersion": "1.9.16",
+			"allowedVersions": "[1.9.22.noko2,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #12 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.5 | [CVE-2022-24839](https://www.mend.io/vulnerability-database/CVE-2022-24839) |\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.5 | [CVE-2022-28366](https://www.mend.io/vulnerability-database/CVE-2022-28366) |\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.5 | [CVE-2022-29546](https://www.mend.io/vulnerability-database/CVE-2022-29546) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"nekohtml\",\"libraryVersion\":\"1.9.16\",\"libraryFixVersion\":\"1.9.22.noko2\",\"libraryArtifactId\":\"nekohtml\",\"libraryGroupId\":\"net.sourceforge.nekohtml\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"High\",\"score\":\"7.5\",\"vulnerabilityId\":\"CVE-2022-24839\"},{\"severity\":\"High\",\"score\":\"7.5\",\"vulnerabilityId\":\"CVE-2022-28366\"},{\"severity\":\"High\",\"score\":\"7.5\",\"vulnerabilityId\":\"CVE-2022-29546\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"xalan:xalan"
+			],
+			"matchCurrentVersion": "2.7.0",
+			"allowedVersions": "[2.7.2,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #5 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![High](https://whitesource-resources.whitesourcesoftware.com/high_vul_bb.png?) High | 7.3 | [CVE-2014-0107](https://www.mend.io/vulnerability-database/CVE-2014-0107) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"xalan\",\"libraryVersion\":\"2.7.0\",\"libraryFixVersion\":\"2.7.2\",\"libraryArtifactId\":\"xalan\",\"libraryGroupId\":\"xalan\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"High\",\"score\":\"7.3\",\"vulnerabilityId\":\"CVE-2014-0107\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"org.owasp.antisamy:antisamy"
+			],
+			"matchCurrentVersion": "1.5.3",
+			"allowedVersions": "[1.6.7,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #16 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.1 | [CVE-2016-10006](https://www.mend.io/vulnerability-database/CVE-2016-10006) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.1 | [CVE-2017-14735](https://www.mend.io/vulnerability-database/CVE-2017-14735) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.1 | [CVE-2021-35043](https://www.mend.io/vulnerability-database/CVE-2021-35043) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.1 | [CVE-2022-28367](https://www.mend.io/vulnerability-database/CVE-2022-28367) |\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 6.1 | [CVE-2022-29577](https://www.mend.io/vulnerability-database/CVE-2022-29577) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"antisamy\",\"libraryVersion\":\"1.5.3\",\"libraryFixVersion\":\"1.6.7\",\"libraryArtifactId\":\"antisamy\",\"libraryGroupId\":\"org.owasp.antisamy\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"Medium\",\"score\":\"6.1\",\"vulnerabilityId\":\"CVE-2016-10006\"},{\"severity\":\"Medium\",\"score\":\"6.1\",\"vulnerabilityId\":\"CVE-2017-14735\"},{\"severity\":\"Medium\",\"score\":\"6.1\",\"vulnerabilityId\":\"CVE-2021-35043\"},{\"severity\":\"Medium\",\"score\":\"6.1\",\"vulnerabilityId\":\"CVE-2022-28367\"},{\"severity\":\"Medium\",\"score\":\"6.1\",\"vulnerabilityId\":\"CVE-2022-29577\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"commons-httpclient:commons-httpclient"
+			],
+			"matchCurrentVersion": "3.1",
+			"allowedVersions": "[20020423,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #10 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 4.8 | [CVE-2012-5783](https://www.mend.io/vulnerability-database/CVE-2012-5783) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"commons-httpclient\",\"libraryVersion\":\"3.1\",\"libraryFixVersion\":\"20020423\",\"libraryArtifactId\":\"commons-httpclient\",\"libraryGroupId\":\"commons-httpclient\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"Medium\",\"score\":\"4.8\",\"vulnerabilityId\":\"CVE-2012-5783\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		},
+		{
+			"matchDatasources": [
+				"maven"
+			],
+			"matchPackageNames": [
+				"commons-io:commons-io"
+			],
+			"matchCurrentVersion": "2.2",
+			"allowedVersions": "[2.7,)",
+			"vulnerabilityAlert": true,
+			"enabled": true,
+			"ignoreUnstable": false,
+			"groupName": null,
+			"schedule": [],
+			"dependencyDashboardApproval": false,
+			"labels": [
+				"security fix"
+			],
+			"prBodyTemplate": "{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}",
+			"prBodyNotes": [
+				"By merging this PR, the issue #17 will be automatically resolved and closed:\n\n| Severity           | <a href='#'><img src='https://whitesource-resources.whitesourcesoftware.com/cvss3.png' width='19' height='20'></a> CVSS Score       |CVE  |\n|---|---|---|\n| ![Medium](https://whitesource-resources.whitesourcesoftware.com/medium_vul_bb.png?) Medium | 4.8 | [CVE-2021-29425](https://www.mend.io/vulnerability-database/CVE-2021-29425) |\n<!--[REMEDIATE_ANALITICS]{\"libraryData\":{\"libraryName\":\"commons-io\",\"libraryVersion\":\"2.2\",\"libraryFixVersion\":\"2.7\",\"libraryArtifactId\":\"commons-io\",\"libraryGroupId\":\"commons-io\",\"language\":\"Java\"},\"vulnerabilityData\":[{\"severity\":\"Medium\",\"score\":\"4.8\",\"vulnerabilityId\":\"CVE-2021-29425\"}]}[/REMEDIATE_ANALITICS]-->"
+			],
+			"isVulnerabilityAlert": true,
+			"commitMessageSuffix": "",
+			"suppressNotifications": [
+				"prIgnoreNotification",
+				"prEditNotification"
+			]
+		}
+	]
+}
