@@ -1,7 +1,6 @@
 {
 	"branchPrefix": "whitesource-remediate/",
 	"enabledManagers": [
-		"",
 		"maven",
 		"gradle",
 		"npm"
